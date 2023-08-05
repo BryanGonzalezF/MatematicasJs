@@ -44,6 +44,8 @@ function calcularTriangulo(lado1, lado2, base, altura) {
   };
 }
 
+function calcularAlturaTriangulo(lados, base) {}
+
 console.groupEnd('triangulo');
 
 console.group('circulo');
