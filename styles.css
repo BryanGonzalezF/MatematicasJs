@@ -1,0 +1,13 @@
+html {
+  background-color: #fdfdfd;
+}
+
+a {
+  text-decoration: none;
+  color: steelblue;
+}
+
+a:hover {
+  text-shadow: 3px 3px 5px steelblue;
+  text-decoration: underline;
+}
