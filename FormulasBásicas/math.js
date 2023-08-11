@@ -44,7 +44,7 @@ function calcularTriangulo(lado1, lado2, base, altura) {
   };
 }
 
-function calcularAlturaTriangulo(lados, base) {}
+function calcularTriangulo(lados, base) {}
 
 console.groupEnd('triangulo');
 
@@ -73,3 +73,15 @@ function calcularCirculo(radio) {
 }
 
 console.groupEnd('circulo');
+
+console.group('Isosceles');
+
+function calcularAlturaTriangulo(lados, base) {
+  if (lados === base) {
+    console.warn('Este no es un triangulo isosceles');
+  } else {
+    return Math.sqrt(Math.pow(lados, 2) - Math.pow(base, 2) / 4);
+  }
+}
+
+console.groupEnd('Isosceles');
