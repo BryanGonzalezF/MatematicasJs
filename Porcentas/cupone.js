@@ -5,14 +5,67 @@ const pResult = document.querySelector('.result');
 
 btnCalcular.addEventListener('click', calcularConCupon);
 
-const cupones = {
+/* const cupones = {
   platzi1: 10,
   platzi2: 20,
   platzi3: 30,
   platzi4: 40,
-};
+}; */
+
+const cuponArray = [];
+cuponArray.push({
+  name: 'platzi1',
+  discounts: 10,
+});
+cuponArray.push({
+  name: 'platzi2',
+  discounts: 20,
+});
+cuponArray.push({
+  name: 'platzi3',
+  discounts: 30,
+});
+cuponArray.push({
+  name: 'platzi4',
+  discounts: 40,
+});
+cuponArray.push({
+  name: 'platzi5',
+  discounts: 50,
+});
 
 function calcularConCupon(event) {
+  event.preventDefault();
+  const price = Number(Inputprice.value);
+  const cupon = Inputcupon.value;
+
+  let discount;
+
+  function buscarEnLista(cupones) {
+    return cupones.name == cupon;
+  }
+
+  const cuponDescuento = cuponArray.find(buscarEnLista);
+
+  if (cuponDescuento) {
+    discount = cuponDescuento.discounts;
+  } else {
+    pResult.innerText = 'El cupon que ingreso no es valido';
+    return;
+  }
+
+  console.log({
+    cupon,
+    discount,
+    cuponDescuento,
+    cuponArray,
+  });
+
+  const result = (price * (100 - discount)) / 100;
+  pResult.innerText = 'Su precio con descuento es de: ' + '$' + result;
+}
+
+/* function calcularConCupon(event) {
   event.preventDefault();
   const price = Number(Inputprice.value);
   const cupon = Inputcupon.value;
@@ -33,7 +86,7 @@ function calcularConCupon(event) {
 
   const result = (price * (100 - discount)) / 100;
   pResult.innerText = 'Su precio con descuento es de: ' + '$' + result;
-}
+} */
 
 /* function calcularConCupon(event) {
   event.preventDefault();
