@@ -58,7 +58,7 @@ PlatziMath.calcularModa = function calcularModa(lista) {
   }
 
   const listaArr = Object.entries(listaCount);
-  const listaOrdenada = ordenarListaBidimensional(listaArr, 1);
+  const listaOrdenada = PlatziMath.ordenarListaBidimensional(listaArr, 1);
   const MaxNumberLista = listaOrdenada[listaArr.length - 1];
   console.log('La moda de su lista es', MaxNumberLista[0]);
 };
