@@ -14,8 +14,8 @@ PlatziMath.calcularPromedio = function calcularPromedio(lista) {
   const sumaElementos = lista.reduce(sumarTodos);
 
   const promedio = sumaElementos / lista.length;
-  console.log(promedio);
-  return promedio;
+  /*   console.log(promedio);
+   */ return promedio;
 };
 
 PlatziMath.calcularMediana = function calcularMediana(listaDesordenada) {
